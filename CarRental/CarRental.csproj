@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DDBA9540-F872-4FE0-AF60-62643CB376B9}</ProjectGuid>
+    <ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CarRental</RootNamespace>
+    <AssemblyName>CarRental</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="Default.aspx" />
+    <Content Include="SiteMaster.master" />
+    <Content Include="css\OverallStyle.css" />
+    <Content Include="SignIn.aspx" />
+    <Content Include="Img\banner.jpg" />
+    <Content Include="RentCar.aspx" />
+    <Content Include="ReturnCar.aspx" />
+    <Content Include="Review.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMaster.master.cs">
+      <DependentUpon>SiteMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMaster.master.designer.cs">
+      <DependentUpon>SiteMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn.aspx.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn.aspx.designer.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RentCar.aspx.cs">
+      <DependentUpon>RentCar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RentCar.aspx.designer.cs">
+      <DependentUpon>RentCar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnCar.aspx.cs">
+      <DependentUpon>ReturnCar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnCar.aspx.designer.cs">
+      <DependentUpon>ReturnCar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Review.aspx.cs">
+      <DependentUpon>Review.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Review.aspx.designer.cs">
+      <DependentUpon>Review.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\" />
+    <Folder Include="Img\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+</Project>

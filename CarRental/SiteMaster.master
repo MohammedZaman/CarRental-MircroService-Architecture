@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" Inherits="CarRental.SiteMaster" %>
+    <!DOCTYPE html>
+    <html>
+    <head runat="server">
+    	<title>Car Rental</title>
+        <!-- Site CSS Framework -->
+         
+          <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        
+         <!-- custom CSS -->
+         <link rel="stylesheet" type="text/css" href="css/OverallStyle.css">
+         
+         <!-- Icons -->
+         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+                                                                  
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </head>
+    
+    
+    <body>
+
+   <header>
+   
+    <div id="container" >
+    <nav>
+    <div class="nav-wrapper themes">
+      <a href="Default.aspx" style="padding:0px 5px;" class="brand-logo">Car Rental</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="Default.aspx">Home</a></li>
+        <li><a href="SignIn.aspx">Sign In</a></li>
+      </ul>
+    </div>
+  </nav> 
+  </div>
+  </header>
+  
+  
+  <main>  
+    <form runat="server" method="post">
+        <asp:ContentPlaceHolder id="contentPlaceHolder" runat="server" /> 
+    </form>
+ </main>
+ 
+ <footer class="page-footer themes">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Rent a Car</h5>
+                <p class="grey-text text-lighten-4">For your car rental needs </p>
+              </div>
+        
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            <p>&#x24B8; 2019 Car Rental</p>
+           
+            </div>
+          </div>
+        </footer>
+    
+    </body>
+       
+    </html>
+    
+ 
