@@ -12,5 +12,17 @@ namespace CarRental {
 	
 	
 	public partial class Review {
+		
+		protected System.Web.UI.WebControls.Content Content1;
+		
+		protected System.Web.UI.WebControls.DropDownList rateDropDown;
+		
+		protected System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatoRate;
+		
+		protected System.Web.UI.WebControls.TextBox reviewTxtBox;
+		
+		protected System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorReview;
+		
+		protected System.Web.UI.WebControls.Button submit;
 	}
 }

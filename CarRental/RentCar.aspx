@@ -15,7 +15,7 @@
              <asp:DropDownList CssClass="dropdown-trigger btn"  ID="carsDropDown" runat="server">
              <asp:ListItem Text="Select Vehicle" Value="-1" />
              </asp:DropDownList>
-               <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" Style= "width: 128px; color:red;" ErrorMessage="RequiredFieldValidator"
+               <asp:RequiredFieldValidator ID="RequiredFieldValidatorCars" runat="server" Style= "width: 128px; color:red;" ErrorMessage="RequiredFieldValidator"
                 ControlToValidate="carsDropDown">* Fill in required Field </asp:RequiredFieldValidator>
                
             </div>

@@ -17,7 +17,7 @@ namespace CarRental {
 		
 		protected System.Web.UI.WebControls.DropDownList carsDropDown;
 		
-		protected System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorEmail;
+		protected System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorCars;
 		
 		protected System.Web.UI.WebControls.Button submit;
 	}

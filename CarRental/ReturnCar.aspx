@@ -11,7 +11,7 @@
           <div class="row">
             <div class="input-field col s12">
               <asp:TextBox CssClass="validate" ID="referenceTxtBox" runat="server"></asp:TextBox>
-               <asp:RequiredFieldValidator ID="RequiredFieldValidatorPassword" runat="server" Style= "width: 128px; color:red;" ErrorMessage="RequiredFieldValidator"
+               <asp:RequiredFieldValidator ID="RequiredFieldValidatorReference" runat="server" Style= "width: 128px; color:red;" ErrorMessage="RequiredFieldValidator"
                 ControlToValidate="referenceTxtBox">* Fill in required Field </asp:RequiredFieldValidator>
               <label for="referenceTxtBox">Rental Reference</label>
             </div>

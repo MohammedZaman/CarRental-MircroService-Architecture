@@ -17,7 +17,7 @@ namespace CarRental {
 		
 		protected System.Web.UI.WebControls.TextBox referenceTxtBox;
 		
-		protected System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPassword;
+		protected System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorReference;
 		
 		protected System.Web.UI.WebControls.Button submit;
 	}

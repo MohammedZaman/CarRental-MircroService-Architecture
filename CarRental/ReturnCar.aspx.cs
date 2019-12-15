@@ -9,7 +9,7 @@ namespace CarRental
     {
         protected void return_Click(object sender, EventArgs e)
         {
-           
+            Response.Redirect("Review.aspx");
         }
 
     }
