@@ -27,7 +27,7 @@ namespace ReviewManagement
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ReviewContext>(opts =>
-       opts.UseInMemoryDatabase("userDB"));
+       opts.UseInMemoryDatabase("reviewDB"));
             services.AddScoped<ReviewContext>();
             services.AddControllers();
         }

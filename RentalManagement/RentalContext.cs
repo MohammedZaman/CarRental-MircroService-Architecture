@@ -1,73 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using CustomerManagement.Models;
 using Microsoft.EntityFrameworkCore;
-namespace CustomerManagement
+using RentalManagement.Models;
+
+namespace RentalManagement
 {
-    public class CustomerContext : DbContext
+    public class RentalContext : DbContext
     {
 
 
        
      
-       public CustomerContext(DbContextOptions<CustomerContext> options)
+       public RentalContext(DbContextOptions<RentalContext> options)
            : base(options)
         {
         }
 
-        public DbSet<Customer> customers{ get; set; }
+        public DbSet<Rental> rentals{ get; set; }
 
-        public void addCustomer(string userName,string password) {
-            customers.Add(new Customer { userName = userName , password = password});
-        }
-
-        public void addCustomer(Customer customer)
+      
+        public void addRentals(Rental rental)
         {
-            customers.Add(customer);
+            rentals.Add(rental);
         }
 
 
-        public bool isUserExist(Customer customer)
-        {
 
-            if (customers.Any(o => o.userName == customer.userName))
+        public Rental find(long id)
+        {
+            return (Rental)rentals.Find(id);
+        }
+
+
+
+        public Rental findWithReference(String refNum)
+        {
+            foreach (var dbItem in rentals)
             {
-                return true;
-
+                if (refNum  == dbItem.refNum) {
+                    return (Rental)dbItem;
+                }
             }
-            return false;
+            return null;
         }
 
-        public Customer find(long id)
+        public void updateRental(Rental rental)
         {
-            return (Customer)customers.Find(id);
+            rentals.Update(rental);
         }
 
-        public Authorisation Authenticate (string userName,string password)
-        {
-            var myUser = this.customers
-                 .FirstOrDefault(u => u.userName == userName
-                              && u.password == password);
-
-            if (myUser != null)    
-            {
-                Authorisation validAuth = new Authorisation();
-                validAuth.userName = userName;
-                validAuth.isAuthorized = true;
-                validAuth.customerId = myUser.customerId;
-                return validAuth;
-            }
-            else    
-            {
-                Authorisation notValid = new Authorisation();
-                notValid.customerId = -1;
-                notValid.userName = userName;
-                notValid.isAuthorized = false;
-                return notValid;
-
-
-            }
-        }
     }
 }
