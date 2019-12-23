@@ -20,7 +20,7 @@
              <asp:ListItem Text="4(Good)" Value="4" />
              <asp:ListItem Text="5(Very Good)" Value="5" />
              </asp:DropDownList>
-               <asp:RequiredFieldValidator ID="RequiredFieldValidatoRate" runat="server" Style= "width: 128px; color:red;" ErrorMessage="RequiredFieldValidator"
+               <asp:RequiredFieldValidator ID="RequiredFieldValidatoRate" InitialValue="-1" Display="Dynamic" runat="server" Style= "width: 128px; color:red;" ErrorMessage="RequiredFieldValidator"
                 ControlToValidate="rateDropDown">* Fill in required Field </asp:RequiredFieldValidator>
                
             </div>
