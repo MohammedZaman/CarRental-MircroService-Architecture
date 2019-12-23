@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Pages\css\OverallStyle.css" />
+    <None Remove="Pages\Shared\Img\banner.jpg" />
+    <None Remove="Pages\Shared\css\OverallStyle.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\Img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Pages\Privacy.cshtml.cs" />
+    <Compile Remove="Pages\Error.cshtml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Pages\Privacy.cshtml" />
+    <Content Remove="Pages\Error.cshtml" />
+  </ItemGroup>
+</Project>

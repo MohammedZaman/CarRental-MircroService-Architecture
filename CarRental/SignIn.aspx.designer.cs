@@ -15,7 +15,7 @@ namespace CarRental {
 		
 		protected System.Web.UI.WebControls.Content Content1;
 		
-		protected System.Web.UI.WebControls.TextBox emailTxtBox;
+		protected System.Web.UI.WebControls.TextBox uTxtBox;
 		
 		protected System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorEmail;
 		

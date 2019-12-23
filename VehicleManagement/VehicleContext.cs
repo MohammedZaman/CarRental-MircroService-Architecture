@@ -29,8 +29,13 @@ namespace VehicleManagement
         public void updateVehicle(Vehicle vehicle) {
             vehicles.Update(vehicle);
         }
-       
-        
+
+        public Vehicle findWithId(long id)
+        {
+           return vehicles.Find(id);
+        }
+
+
 
     }
 }

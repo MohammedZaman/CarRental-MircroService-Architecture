@@ -29,7 +29,11 @@
       <a href="Default.aspx" style="padding:0px 5px;" class="brand-logo">Car Rental</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="Default.aspx">Home</a></li>
-        <li><a href="SignIn.aspx">Sign In</a></li>
+        <li runat="server" id="signMenu"> <a href="SignIn.aspx">Sign In</a></li>
+          <li runat="server" id="rentalMenu"> <a href="RentCar.aspx">Rent A Car</a></li>
+          <li runat="server" id="returnMenu"> <a href="ReturnCar.aspx">Return A Rental</a></li>
+           <li runat="server" id="reviewMenu"> <a href="AddReview.aspx">Review</a></li>
+           <li runat="server" id="logMenu"> <a href="LogOut.aspx">Log Out</a></li>
       </ul>
     </div>
   </nav> 

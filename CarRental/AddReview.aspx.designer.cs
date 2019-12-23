@@ -11,7 +11,7 @@
 namespace CarRental {
 	
 	
-	public partial class Review {
+	public partial class AddReview{
 		
 		protected System.Web.UI.WebControls.Content Content1;
 		

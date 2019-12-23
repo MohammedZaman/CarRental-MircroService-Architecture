@@ -13,6 +13,16 @@ namespace CarRental {
 	
 	public partial class SiteMaster {
 		
+		protected System.Web.UI.HtmlControls.HtmlGenericControl signMenu;
+		
+		protected System.Web.UI.HtmlControls.HtmlGenericControl rentalMenu;
+		
+		protected System.Web.UI.HtmlControls.HtmlGenericControl returnMenu;
+		
+		protected System.Web.UI.HtmlControls.HtmlGenericControl reviewMenu;
+		
+		protected System.Web.UI.HtmlControls.HtmlGenericControl logMenu;
+		
 		protected System.Web.UI.WebControls.ContentPlaceHolder contentPlaceHolder;
 	}
 }

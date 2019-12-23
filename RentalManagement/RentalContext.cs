@@ -36,11 +36,14 @@ namespace RentalManagement
 
         public Rental findWithReference(String refNum)
         {
-            foreach (var dbItem in rentals)
-            {
-                if (refNum  == dbItem.refNum) {
-                    return (Rental)dbItem;
+            List<Rental> rentalsList = rentals.ToList();
+
+            for(int i = 0; i < rentalsList.Count; i++) {
+                if (rentalsList[i].refNum == refNum)
+                {
+                    return rentalsList[i];
                 }
+
             }
             return null;
         }

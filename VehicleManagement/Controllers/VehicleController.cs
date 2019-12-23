@@ -54,5 +54,16 @@ namespace VehicleManagement.Controllers
             }
             return NotFound("Vehicle Does Not Exist");
         }
+
+        [HttpGet("{id}")]
+        public IActionResult GetWithId(long id)
+        {
+            Vehicle temp = _context.findWithId(id);
+            if (temp != null)
+            {
+                Ok(temp);
+            }
+            return NotFound("Not Vehicles Found");
+        }
     }
 }

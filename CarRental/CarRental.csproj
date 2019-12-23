@@ -8,7 +8,9 @@
     <OutputType>Library</OutputType>
     <RootNamespace>CarRental</RootNamespace>
     <AssemblyName>CarRental</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,6 +32,13 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Web.Services" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -41,7 +50,9 @@
     <Content Include="Img\banner.jpg" />
     <Content Include="RentCar.aspx" />
     <Content Include="ReturnCar.aspx" />
-    <Content Include="Review.aspx" />
+    <Content Include="AddReview.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="LogOut.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -77,16 +88,29 @@
     <Compile Include="ReturnCar.aspx.designer.cs">
       <DependentUpon>ReturnCar.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Review.aspx.cs">
-      <DependentUpon>Review.aspx</DependentUpon>
+    <Compile Include="AddReview.aspx.cs">
+      <DependentUpon>AddReview.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Review.aspx.designer.cs">
-      <DependentUpon>Review.aspx</DependentUpon>
+    <Compile Include="AddReview.aspx.designer.cs">
+      <DependentUpon>AddReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccessAPI.cs" />
+    <Compile Include="Objects\Customer.cs" />
+    <Compile Include="Objects\Authorisation.cs" />
+    <Compile Include="Objects\Vehicle.cs" />
+    <Compile Include="Objects\Rental.cs" />
+    <Compile Include="Objects\Review.cs" />
+    <Compile Include="LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogOut.aspx.designer.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="css\" />
     <Folder Include="Img\" />
+    <Folder Include="Objects\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

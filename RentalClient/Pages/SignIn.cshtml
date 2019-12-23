@@ -1,6 +1,8 @@
-﻿<%@ Page Language="C#" Inherits="CarRental.SignIn" MasterPageFile="~/SiteMaster.Master" AutoEventWireup="true" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="contentPlaceHolder" runat="server">
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
 
 <div  style="padding:50px 0px;">       
 <div class="row">
@@ -11,11 +13,11 @@
         
           <div class="row">
             <div class="input-field col s12">              
-            <i class="material-icons prefix">account_box</i>
-              <asp:TextBox CssClass="validate" ID="uTxtBox" runat="server"></asp:TextBox>
+            <i class="material-icons prefix">email</i>
+              <asp:TextBox CssClass="validate" ID="emailTxtBox" runat="server"></asp:TextBox>
                <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" Style= "width: 128px; color:red;" ErrorMessage="RequiredFieldValidator"
-                ControlToValidate="uTxtBox">* Fill in required Field </asp:RequiredFieldValidator>
-              <label for="uTxtBox">Username</label>
+                ControlToValidate="emailTxtBox">* Fill in required Field </asp:RequiredFieldValidator>
+              <label for="emailTxtBox">Email</label>
             </div>
           </div>
           <div class="row">
@@ -36,4 +38,3 @@
   </div>
 </div>
 </div>
-</asp:Content>
